@@ -1,0 +1,35 @@
+FROM node:16.19.1-alpine AS build_frontend
+
+WORKDIR /app/frontend
+COPY frontend /app/frontend
+
+RUN npm install
+RUN npm run build
+
+
+FROM alpine:latest AS build
+
+RUN apk add --no-cache go g++ build-base
+
+WORKDIR /app
+COPY . /app
+COPY --from=build_frontend /app/frontend /app/frontend
+
+RUN go mod download
+RUN CGO_ENABLED=1 GOOS=linux go build --ldflags '-linkmode external -extldflags -static'
+
+
+FROM alpine:latest
+RUN apk --update add ca-certificates \
+                     mailcap \
+                     curl
+
+HEALTHCHECK --start-period=2s --interval=30s --timeout=3s \
+  CMD curl -f http://localhost/health || exit 1
+
+VOLUME /srv /database
+
+COPY docker/root/defaults/settings.json /.filebrowser.json
+COPY --from=build /app/filebrowser /filebrowser
+
+ENTRYPOINT [ "/filebrowser" ]
