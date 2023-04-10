@@ -334,9 +334,17 @@ func quickSetup(flags *pflag.FlagSet, d pythonData) {
 		},
 		AuthMethod: "",
 		Branding:   settings.Branding{},
-		Commands:   nil,
-		Shell:      nil,
-		Rules:      nil,
+		Tus: settings.Tus{
+			Enabled:         true,
+			ChunkSize:       settings.DefaultTusChunkSize,
+			ParallelUploads: settings.DefaultTusParallelUploads,
+			RetryCount:      settings.DefaultTusRetryCount,
+			RetryBaseDelay:  settings.DefaultTusRetryBaseDelay,
+			RetryBackoff:    settings.DefaultTusRetryBackoff,
+		},
+		Commands: nil,
+		Shell:    nil,
+		Rules:    nil,
 	}
 
 	var err error

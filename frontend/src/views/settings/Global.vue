@@ -101,6 +101,91 @@
               id="branding-files"
             />
           </p>
+
+          <h3>{{ $t("settings.tusUploads") }}</h3>
+
+          <i18n path="settings.tusUploadsHelp" tag="p" class="small">
+            <a
+              class="link"
+              target="_blank"
+              href="https://tus.io/"
+              >documentation</a
+            >
+          </i18n>
+
+          <p>
+            <input
+              type="checkbox"
+              v-model="settings.tus.enabled"
+              id="tus-enabled"
+            />
+            {{ $t("settings.tusUploadsEnabled") }}
+          </p>
+
+          <div class="tusConditionalSettings">
+            <label for="tus-parallelUploads">{{
+              $t("settings.tusUploadsParallelUploads")
+            }}</label>
+            <input
+              class="input input--block"
+              type="number"
+              v-model.number="settings.tus.parallelUploads"
+              id="tus-parallelUploads"
+              v-bind:disabled="!settings.tus.enabled"
+              min="1"
+            />
+
+            <label for="tus-chunkSize">{{
+              $t("settings.tusUploadsChunkSize")
+            }}</label>
+            <input
+              class="input input--block"
+              type="number"
+              v-model.number="settings.tus.chunkSize"
+              id="tus-chunkSize"
+              v-bind:disabled="!settings.tus.enabled"
+              min="0"
+              step="1000000"
+            />
+
+            <label for="tus-retryCount">{{
+              $t("settings.tusUploadsRetryCount")
+            }}</label>
+            <input
+              class="input input--block"
+              type="number"
+              v-model.number="settings.tus.retryCount"
+              id="tus-retryCount"
+              v-bind:disabled="!settings.tus.enabled"
+              min="0"
+            />
+
+            <label for="tus-retryBaseDelay">{{
+              $t("settings.tusUploadsRetryBaseDelay")
+            }}</label>
+            <input
+              class="input input--block"
+              type="number"
+              v-model.number="settings.tus.retryBaseDelay"
+              id="tus-retryBaseDelay"
+              v-bind:disabled="!settings.tus.enabled || settings.tus.retryCount < 1"
+              min="0"
+              step="1000"
+            />
+
+            <label for="tus-retryBackoff">{{
+              $t("settings.tusUploadsRetryBackoff")
+            }}</label>
+            <input
+              class="input input--block"
+              type="number"
+              v-model.number="settings.tus.retryBackoff"
+              id="tus-retryBackoff"
+              v-bind:disabled="!settings.tus.enabled || settings.tus.retryCount < 1"
+              min="1"
+              step="0.5"
+            />
+          </div>
         </div>
 
         <div class="card-action">
