@@ -10,6 +10,8 @@
 @import "./base.css";
 @import "./header.css";
 @import "./listing.css";
+@import "./listing-icons.css";
+@import "./upload-files.css";
 @import "./dashboard.css";
 @import "./login.css";
 
@@ -313,6 +315,11 @@ main .spinner .bounce2 {
   padding: 0 1em;
 }
 
+/*** RTL - flip and position arrow of path ***/
+body.rtl .breadcrumbs .chevron {
+  transform: scaleX(-1) translateX(16em);
+}
+
 #editor-container .breadcrumbs span {
   font-size: .75rem;
 }
@@ -370,6 +377,16 @@ main .spinner .bounce2 {
 }
 
 /* * * * * * * * * * * * * * * *
+ *         SETTINGS TUS        *
+ * * * * * * * * * * * * * * * */
+
+.tusConditionalSettings input:disabled {
+  background-color: #ddd;
+  color: #999;
+  cursor: not-allowed;
+}
+
+/* * * * * * * * * * * * * * * *
  *         SETTINGS RULES      *
  * * * * * * * * * * * * * * * */
 
@@ -402,3 +419,22 @@ main .spinner .bounce2 {
 }
 
 @import './mobile.css';
+
+/* * * * * * * * * * * * * * * *
+ *         RTL overrides       *
+ * * * * * * * * * * * * * * * */
+
+body.rtl .card-content textarea {
+  direction: ltr;
+  text-align: left;
+}
+
+body.rtl .card-content .small + input {
+  direction: ltr;
+  text-align: left;
+}
+
+body.rtl .card.floating .card-content .file-list {
+  direction: ltr;
+  text-align: left;
+}

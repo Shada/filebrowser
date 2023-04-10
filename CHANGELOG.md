@@ -2,6 +2,150 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.23.0](https://github.com/filebrowser/filebrowser/compare/v2.22.4...v2.23.0) (2022-11-05)
+
+
+### Features
+
+* add rtl support ([#2178](https://github.com/filebrowser/filebrowser/issues/2178)) ([2c14146](https://github.com/filebrowser/filebrowser/commit/2c14146a314bb271be66a36c63b64852a2848e26))
+* hebrew translation ([#2168](https://github.com/filebrowser/filebrowser/issues/2168)) ([a49105d](https://github.com/filebrowser/filebrowser/commit/a49105db1d5f0d8f3d6641940ea86da959ffe006))
+* hook authentication method ([dda9a38](https://github.com/filebrowser/filebrowser/commit/dda9a389f387e94643a9a2ae56027260b210152a))
+* update Polish translation ([#2089](https://github.com/filebrowser/filebrowser/issues/2089)) ([57c99e0](https://github.com/filebrowser/filebrowser/commit/57c99e0e261b4ed4c2cf468ce3ab09f1a440b359))
+
+
+### Bug Fixes
+
+* missing video controls on mobile ([#2180](https://github.com/filebrowser/filebrowser/issues/2180)) ([a5757b9](https://github.com/filebrowser/filebrowser/commit/a5757b94e8ed492d454b9e427b7f45824cc56c5c))
+* modify the delete confirmation interface logic. ([#2138](https://github.com/filebrowser/filebrowser/issues/2138)) ([0401adf](https://github.com/filebrowser/filebrowser/commit/0401adf7f4dd76760fe26b5baee02ebc726b51a9))
+
+
+### Build
+
+* **deps:** bump ansi-html and webpack-dev-server in /frontend ([#2184](https://github.com/filebrowser/filebrowser/issues/2184)) ([3a0dace](https://github.com/filebrowser/filebrowser/commit/3a0dace9a93f9d57855801de548891010cf0830e))
+* **deps:** bump terser from 4.8.0 to 4.8.1 in /frontend ([#2054](https://github.com/filebrowser/filebrowser/issues/2054)) ([aaed985](https://github.com/filebrowser/filebrowser/commit/aaed985699b3c63092ecb02c8bc07634123360ab))
+
+### [2.22.4](https://github.com/filebrowser/filebrowser/compare/v2.22.3...v2.22.4) (2022-07-18)
+
+
+### Bug Fixes
+
+* disable cookie auth for non GET requests ([80030de](https://github.com/filebrowser/filebrowser/commit/80030dee32d161043766d57ba4e0ad0b0d99290b))
+
+
+### Build
+
+* **deps:** bump moment from 2.29.2 to 2.29.4 in /frontend ([#2036](https://github.com/filebrowser/filebrowser/issues/2036)) ([cb43770](https://github.com/filebrowser/filebrowser/commit/cb437700255e41ff559b9f5a99ab4290b2f8df87))
+* **deps:** bump shell-quote from 1.7.2 to 1.7.3 in /frontend ([#2025](https://github.com/filebrowser/filebrowser/issues/2025)) ([eaba7e5](https://github.com/filebrowser/filebrowser/commit/eaba7e5255f960141e0fc1557f87073df9f6d66a))
+
+### [2.22.3](https://github.com/filebrowser/filebrowser/compare/v2.22.2...v2.22.3) (2022-07-05)
+
+
+### Bug Fixes
+
+* use correct field name in user put api ([#2026](https://github.com/filebrowser/filebrowser/issues/2026)) ([d94acdd](https://github.com/filebrowser/filebrowser/commit/d94acdd89a0069fe87107024fd332a0d59a112fc))
+
+### [2.22.2](https://github.com/filebrowser/filebrowser/compare/v2.22.1...v2.22.2) (2022-07-01)
+
+
+### Bug Fixes
+
+* display disk capacity in a correct format ([#2013](https://github.com/filebrowser/filebrowser/issues/2013)) ([dec3d62](https://github.com/filebrowser/filebrowser/commit/dec3d629d42de567aa708154ebc4e03b5223608c))
+* don't calculate usage for files ([#1973](https://github.com/filebrowser/filebrowser/issues/1973)) ([577c0ef](https://github.com/filebrowser/filebrowser/commit/577c0efa9cff13628d5e3bac710ef568a00949e0)), closes [#1972](https://github.com/filebrowser/filebrowser/issues/1972) [#1967](https://github.com/filebrowser/filebrowser/issues/1967)
+* preview url building fix ([#1976](https://github.com/filebrowser/filebrowser/issues/1976)) ([dcf0bc6](https://github.com/filebrowser/filebrowser/commit/dcf0bc65bfcfc7df3804d7392598a92019468cf7))
+
+
+### Build
+
+* **backend:** upgrade golangci-lint to 1.46.2 ([#1991](https://github.com/filebrowser/filebrowser/issues/1991)) ([8118afd](https://github.com/filebrowser/filebrowser/commit/8118afd0ac0d25f4503c98879369764c35e7408e))
+
+### [2.22.1](https://github.com/filebrowser/filebrowser/compare/v2.22.0...v2.22.1) (2022-06-06)
+
+
+### Bug Fixes
+
+* use correct basepath prefix for preview urls ([#1971](https://github.com/filebrowser/filebrowser/issues/1971)) ([1e7d3b2](https://github.com/filebrowser/filebrowser/commit/1e7d3b25c283c556d98c65f1c2f46db4e4178995))
+
+
+### Build
+
+* **backend:** bump go version to 1.8.3 ([b16982d](https://github.com/filebrowser/filebrowser/commit/b16982df0f7da9eedb678455298b42ac55c86666))
+
+## [2.22.0](https://github.com/filebrowser/filebrowser/compare/v2.21.1...v2.22.0) (2022-06-03)
+
+
+### Features
+
+* add branding to the window title ([#1850](https://github.com/filebrowser/filebrowser/issues/1850)) ([f8dfbf7](https://github.com/filebrowser/filebrowser/commit/f8dfbf7eeecf3ee99ce906276777676f44e81e34))
+* add disk usage information to the sidebar ([d1d8e3e](https://github.com/filebrowser/filebrowser/commit/d1d8e3e3405381b01317fe07ae729d70219415a7))
+* automatically focus username field on login page ([596c732](https://github.com/filebrowser/filebrowser/commit/596c73288f5b53bd7e79ab8046136dc75ff078b9))
+* invalid symlink icon ([b14b911](https://github.com/filebrowser/filebrowser/commit/b14b9114f837cacf9f7788e88c503142a81585be))
+* page title localization ([8a43413](https://github.com/filebrowser/filebrowser/commit/8a43413f888440dc11b11c509abff45f706033d8))
+
+
+### Bug Fixes
+
+* allow CSP inline styling ([5da9d74](https://github.com/filebrowser/filebrowser/commit/5da9d74da62c69c431361bcaf0c07dc1da237ea8))
+* disable autocapitalize of login input (closes [#1910](https://github.com/filebrowser/filebrowser/issues/1910)) ([aed3af5](https://github.com/filebrowser/filebrowser/commit/aed3af58384697dc3de30f1450b837b0b74e4fa6))
+* drag-and-drop folder upload ([e677c78](https://github.com/filebrowser/filebrowser/commit/e677c78471f09f8d2c21d63d7388e908924aa6d9))
+* expired token error ([c3bd118](https://github.com/filebrowser/filebrowser/commit/c3bd1188aa396cbf00c593d259a9da0eddeeea3b))
+* folder info on upload list ([d1d7b23](https://github.com/filebrowser/filebrowser/commit/d1d7b23da6cc0c9a2f2f3e17021ec4f13ea557dd))
+* network error object message ([fc209f6](https://github.com/filebrowser/filebrowser/commit/fc209f64deff7a2793980d11ee738f7140c444cf))
+* set correct scope when user home creation is enabled ([02730bb](https://github.com/filebrowser/filebrowser/commit/02730bb9bfa3bfbfa251bb4736fc4c08d33609ab))
+
+
+### Build
+
+* **backend:** bump dependency versions ([7c9a75e](https://github.com/filebrowser/filebrowser/commit/7c9a75e72588f92d58fb58d32cdac352bce73b20))
+* **deps:** bump async from 2.6.3 to 2.6.4 in /frontend ([#1933](https://github.com/filebrowser/filebrowser/issues/1933)) ([e5fa96b](https://github.com/filebrowser/filebrowser/commit/e5fa96b666eac2e46a02bde832488baca5f2cd6d))
+* **deps:** bump eventsource from 1.1.0 to 1.1.1 in /frontend ([dd50369](https://github.com/filebrowser/filebrowser/commit/dd503695a1a8119a631643414d3a9070890f3f3c))
+* **deps:** bump minimist from 1.2.5 to 1.2.6 in /frontend ([#1889](https://github.com/filebrowser/filebrowser/issues/1889)) ([a74c72d](https://github.com/filebrowser/filebrowser/commit/a74c72db451207e1275988f3d208fa6d6f0468a9))
+* **deps:** bump minimist from 1.2.5 to 1.2.6 in /tools ([#1891](https://github.com/filebrowser/filebrowser/issues/1891)) ([f5b1e10](https://github.com/filebrowser/filebrowser/commit/f5b1e106183fb2192063a72fd195fc8c181ba8f9))
+* **deps:** bump moment from 2.29.1 to 2.29.2 in /frontend ([#1900](https://github.com/filebrowser/filebrowser/issues/1900)) ([040584c](https://github.com/filebrowser/filebrowser/commit/040584c86563d869c7a05887ef1f781bce653033))
+* **deps:** bump url-parse from 1.5.7 to 1.5.10 in /frontend ([#1841](https://github.com/filebrowser/filebrowser/issues/1841)) ([b2ad3f7](https://github.com/filebrowser/filebrowser/commit/b2ad3f73686a2abaa4fc62963fba6f83c9da9b5e))
+* **frontend:** bump node version from 14 to 16 ([ac3ead8](https://github.com/filebrowser/filebrowser/commit/ac3ead8dcef9c64c6be8b5cbbceee143b2cc77a8))
+* upgrade go version to 1.18.1 ([6bd34c7](https://github.com/filebrowser/filebrowser/commit/6bd34c76324780c1edd8625d5b22f5a84990852b))
+
+### [2.21.1](https://github.com/filebrowser/filebrowser/compare/v2.21.0...v2.21.1) (2022-02-22)
+
+
+### Bug Fixes
+
+* display user scope for admin users ([#1834](https://github.com/filebrowser/filebrowser/issues/1834)) ([6366cf0](https://github.com/filebrowser/filebrowser/commit/6366cf0b181f13eac38f69f1760d6f6f0586a5d1))
+
+## [2.21.0](https://github.com/filebrowser/filebrowser/compare/v2.20.1...v2.21.0) (2022-02-21)
+
+
+### Features
+
+* add colorized file type icons ([2948589](https://github.com/filebrowser/filebrowser/commit/2948589fcde6d1dca7f3ea52a621d8213fa3300c))
+* add gallery view mode ([8888b9f](https://github.com/filebrowser/filebrowser/commit/8888b9f44640394df9e3583db4392472d7027a4b))
+* add Ukrainian translation / update Russian translation ([#1753](https://github.com/filebrowser/filebrowser/issues/1753)) ([665e458](https://github.com/filebrowser/filebrowser/commit/665e45889cd333f1e3500e4bf38d15d229c9fe2a))
+* add upload file list with progress ([#1825](https://github.com/filebrowser/filebrowser/issues/1825)) ([cf85404](https://github.com/filebrowser/filebrowser/commit/cf85404dd25cd7fdd73aa32878b4dc5f85ee3e96))
+* smaller column width to fit 2 columns in landscape mobiles ([7870e89](https://github.com/filebrowser/filebrowser/commit/7870e89bc04f1494f2705795476b5f1c9d621e38))
+* use real image path to calculate cache key ([c198723](https://github.com/filebrowser/filebrowser/commit/c1987237d05adcce77c614e5247a181ae5cdfacd))
+
+
+### Bug Fixes
+
+* correctly handle non-ascii passwords for shared resources ([c782f21](https://github.com/filebrowser/filebrowser/commit/c782f21b0fa4511a15e7015117d075eaf5ea332c))
+* don't expose scope for non-admin users ([0942fc7](https://github.com/filebrowser/filebrowser/commit/0942fc7042fd949cce91855169d0bcf16eb75771))
+* open all the pdf files correctly ([#1742](https://github.com/filebrowser/filebrowser/issues/1742)) ([949f0f2](https://github.com/filebrowser/filebrowser/commit/949f0f277f6004904b3edfa716a8365ec93fa0fa))
+
+
+### Build
+
+* **deps:** bump browserslist from 4.16.3 to 4.19.1 in /frontend ([8089007](https://github.com/filebrowser/filebrowser/commit/80890075e802e2a4217edbb01d6417122d702f5e))
+* **deps:** bump dns-packet from 1.3.1 to 1.3.4 in /frontend ([a73d7f1](https://github.com/filebrowser/filebrowser/commit/a73d7f14b787935c6ebe525dba64b65f8ed733e2))
+* **deps:** bump follow-redirects from 1.13.3 to 1.14.8 in /frontend ([f1f7f17](https://github.com/filebrowser/filebrowser/commit/f1f7f17ade8d40fc6cfb22c79960bce299876b56))
+* **deps:** bump hosted-git-info from 2.8.8 to 2.8.9 in /frontend ([e7659ea](https://github.com/filebrowser/filebrowser/commit/e7659ea36bdf780ce17005f7170a2fef02a2d5e5))
+* **deps:** bump path-parse from 1.0.6 to 1.0.7 in /frontend ([c014966](https://github.com/filebrowser/filebrowser/commit/c01496624a7ebfc8a7c256bd919a400367281cbb))
+* **deps:** bump postcss from 7.0.35 to 7.0.39 in /frontend ([9182d33](https://github.com/filebrowser/filebrowser/commit/9182d33e1cc375473fb18989a92d20252884f096))
+* **deps:** bump ssri from 6.0.1 to 6.0.2 in /frontend ([3717186](https://github.com/filebrowser/filebrowser/commit/371718634b11f32e68165f31c51b6b1139c829ec))
+* **deps:** bump tar from 6.1.0 to 6.1.11 in /frontend ([010d16f](https://github.com/filebrowser/filebrowser/commit/010d16fc1d8f0200e5662943aef17ee89c5877b7))
+* **deps:** bump url-parse from 1.5.1 to 1.5.4 in /frontend ([8906408](https://github.com/filebrowser/filebrowser/commit/8906408a8f0ed86d1e11ea90fc573b36815c9c0d))
+* **deps:** bump url-parse from 1.5.4 to 1.5.7 in /frontend ([228ebea](https://github.com/filebrowser/filebrowser/commit/228ebea66cc871b33459406590a80ef906298e7d))
+* **deps:** bump ws from 6.2.1 to 6.2.2 in /frontend ([73c8073](https://github.com/filebrowser/filebrowser/commit/73c80732d934bc8802a6d7c7a559cad37df405f0))
+
 ### [2.20.1](https://github.com/filebrowser/filebrowser/compare/v2.20.0...v2.20.1) (2021-12-21)
 
 

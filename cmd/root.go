@@ -181,6 +181,7 @@ user created with the credentials from options "username" and "password".`,
 		defer listener.Close()
 
 		log.Println("Listening on", listener.Addr().String())
+		//nolint: gosec
 		if err := http.Serve(listener, handler); err != nil {
 			log.Fatal(err)
 		}
@@ -312,9 +313,10 @@ func setupLog(logMethod string) {
 
 func quickSetup(flags *pflag.FlagSet, d pythonData) {
 	set := &settings.Settings{
-		Key:           generateKey(),
-		Signup:        false,
-		CreateUserDir: false,
+		Key:              generateKey(),
+		Signup:           false,
+		CreateUserDir:    false,
+		UserHomeBasePath: settings.DefaultUsersHomeBasePath,
 		Defaults: settings.UserDefaults{
 			Scope:       ".",
 			Locale:      "en",
@@ -330,6 +332,19 @@ func quickSetup(flags *pflag.FlagSet, d pythonData) {
 				Download: true,
 			},
 		},
+		AuthMethod: "",
+		Branding:   settings.Branding{},
+		Tus: settings.Tus{
+			Enabled:         true,
+			ChunkSize:       settings.DefaultTusChunkSize,
+			ParallelUploads: settings.DefaultTusParallelUploads,
+			RetryCount:      settings.DefaultTusRetryCount,
+			RetryBaseDelay:  settings.DefaultTusRetryBaseDelay,
+			RetryBackoff:    settings.DefaultTusRetryBackoff,
+		},
+		Commands: nil,
+		Shell:    nil,
+		Rules:    nil,
 	}
 
 	var err error

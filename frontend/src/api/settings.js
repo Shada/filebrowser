@@ -4,13 +4,13 @@ export function get() {
   return fetchJSON(`/api/settings`, {});
 }
 
+export function getTusSettings() {
+  return fetchJSON(`/api/settings-tus`, {});
+}
+
 export async function update(settings) {
-  const res = await fetchURL(`/api/settings`, {
+  await fetchURL(`/api/settings`, {
     method: "PUT",
     body: JSON.stringify(settings),
   });
-
-  if (res.status !== 200) {
-    throw new Error(res.status);
-  }
 }
