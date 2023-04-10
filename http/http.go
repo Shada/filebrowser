@@ -65,6 +65,13 @@ func NewHandler(
 	api.PathPrefix("/resources").Handler(monkey(resourcePutHandler, "/api/resources")).Methods("PUT")
 	api.PathPrefix("/resources").Handler(monkey(resourcePatchHandler(fileCache), "/api/resources")).Methods("PATCH")
 
+	const tusPath = "/tus"
+	tusHandler, err := NewTusHandler(store, server, "/api"+tusPath)
+	if err != nil {
+		return nil, err
+	}
+	api.PathPrefix(tusPath).Handler(tusHandler)
+
 	api.PathPrefix("/usage").Handler(monkey(diskUsage, "/api/usage")).Methods("GET")
 
 	api.Path("/shares").Handler(monkey(shareListHandler, "/api/shares")).Methods("GET")
@@ -74,6 +81,8 @@ func NewHandler(
 
 	api.Handle("/settings", monkey(settingsGetHandler, "")).Methods("GET")
 	api.Handle("/settings", monkey(settingsPutHandler, "")).Methods("PUT")
+
+	api.Handle("/settings-tus", monkey(tusSettingsGetHandler, "")).Methods("GET")
 
 	api.PathPrefix("/raw").Handler(monkey(rawHandler, "/api/raw")).Methods("GET")
 	api.PathPrefix("/preview/{size}/{path:.*}").
